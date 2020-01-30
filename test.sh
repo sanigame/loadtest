@@ -5,12 +5,11 @@
 # Example for using User Defined Variables with JMeter
 # These will be substituted in JMX test script
 # See also: http://stackoverflow.com/questions/14317715/jmeter-changing-user-defined-variables-from-command-line
-export TARGET_HOST="www.map5.nl"
-export TARGET_PORT="80"
-export TARGET_PATH="/kaarten.html"
-export TARGET_KEYWORD="Kaartdiensten"
 
 T_DIR=tests/krungthai-next
+JMX_FILE=Transfer_Intranal_KTB_to_KTB.jmx
+JTL_FILE=Transfer_Intranal_KTB_to_KTB.jtl
+LOG_FILE=jmeter.log
 
 # Reporting dir: start fresh
 R_DIR=${T_DIR}/report
@@ -20,9 +19,7 @@ mkdir -p ${R_DIR}
 /bin/rm -f ${T_DIR}/test-plan.jtl ${T_DIR}/jmeter.log  > /dev/null 2>&1
 
 ./run.sh -Dlog_level.jmeter=DEBUG \
-	-JTARGET_HOST=${TARGET_HOST} -JTARGET_PORT=${TARGET_PORT} \
-	-JTARGET_PATH=${TARGET_PATH} -JTARGET_KEYWORD=${TARGET_KEYWORD} \
-	-n -t ${T_DIR}/Transfer_Intranal_KTB_to_KTB.jmx -l ${T_DIR}/test-plan.jtl -j ${T_DIR}/jmeter.log \
+	-n -t ${T_DIR}/${JMX_FILE} -l ${T_DIR}/${JTL_FILE} -j ${T_DIR}/${LOG_FILE} \
 	-e -o ${R_DIR}
 
 echo "==== jmeter.log ===="
