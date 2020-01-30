@@ -23,7 +23,7 @@ mkdir -p ${R_DIR}
 	-e -o ${R_DIR}
 
 echo "==== jmeter.log ===="
-cat tests/${LOG_FILE}
+cat ${T_DIR}/${LOG_FILE}
 
 echo "==== Raw Test Report ===="
 cat ${T_DIR}/${JTL_FILE}
@@ -32,4 +32,4 @@ echo "==== HTML Test Report ===="
 echo "See HTML test report in ${R_DIR}/index.html"
 
 echo "==== JTL Test Report ===="
-echo "pbcopy < ${T_DIR}/${JTL_FILE}"
+echo "pbcopy < tests/${JTL_FILE}"
