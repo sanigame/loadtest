@@ -23,7 +23,7 @@ mkdir -p ${R_DIR}
 	-e -o ${R_DIR}
 
 echo "==== jmeter.log ===="
-cat ${T_DIR}/${LOG_FILE}
+cat tests/${LOG_FILE}
 
 echo "==== Raw Test Report ===="
 cat ${T_DIR}/${JTL_FILE}
