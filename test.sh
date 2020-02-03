@@ -20,7 +20,7 @@ mkdir -p ${R_DIR}
 
 ./run.sh -Dlog_level.jmeter=DEBUG \
 	-n -t ${T_DIR}/${JMX_FILE} -l ${T_DIR}/${JTL_FILE} -j ${T_DIR}/${LOG_FILE} \
-	-e -o ${R_DIR} -R 10.148.0.5
+	-e -o ${R_DIR} -R 
 
 echo "==== jmeter.log ===="
 cat ${T_DIR}/${LOG_FILE}
