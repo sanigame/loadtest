@@ -25,8 +25,8 @@ mkdir -p ${R_DIR}
 echo "==== jmeter.log ===="
 cat ${T_DIR}/${LOG_FILE}
 
-echo "==== Raw Test Report ===="
-cat ${T_DIR}/${JTL_FILE}
+# echo "==== Raw Test Report ===="
+# cat ${T_DIR}/${JTL_FILE}
 
 echo "==== HTML Test Report ===="
 echo "See HTML test report in ${R_DIR}/index.html"
