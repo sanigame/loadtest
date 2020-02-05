@@ -26,7 +26,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="endPoint" elementType="Argument">
             <stringProp name="Argument.name">endPoint</stringProp>
-            <stringProp name="Argument.value">35.198.192.160</stringProp>
+            <stringProp name="Argument.value">35.187.247.101</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">real 34.87.45.145 mock 35.198.192.160</stringProp>
           </elementProp>
